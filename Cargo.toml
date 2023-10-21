@@ -17,6 +17,9 @@ libc = "0.2.39"
 serde = { version = "1.0.27", optional = true }
 serde_derive = { version = "1.0.27", optional = true }
 
+[target.'cfg(target_os = "windows")'.dependencies]
+tempdir = "0.3.7"
+
 [target.'cfg(any(target_os = "linux", target_os = "android"))'.dependencies]
 bitflags = "1.0"
 

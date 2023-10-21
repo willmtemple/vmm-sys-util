@@ -16,6 +16,11 @@ mod unix;
 #[cfg(unix)]
 pub use crate::unix::*;
 
+#[cfg(windows)]
+mod windows;
+#[cfg(windows)]
+pub use crate::windows::*;
+
 pub mod errno;
 pub mod fam;
 pub mod metric;
